@@ -294,9 +294,9 @@ Dropdown-Menu Styles
     gap: 16px;
     margin-top: 17px;
 }
-.social-link img{
-    width: 32px;
-    height: 32px;
+.social-link a{
+    color: white;
+    font-size: 30px;
 }
 
 
