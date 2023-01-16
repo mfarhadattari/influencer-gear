@@ -119,6 +119,20 @@ Dropdown-Menu Styles
     margin-bottom: 16px;
 }
 
+@keyframes rounding {
+    0% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
 .banner {
     background-image: url(../asset/images/Circle\ design.svg);
     background-size: contain;
@@ -126,7 +140,9 @@ Dropdown-Menu Styles
     padding: 30px 3px;
     width: 475px;
     height: 475px;
+    animation: rounding 4s linear infinite;
 }
+
 
 .banner img {
     width: 440px;
@@ -134,9 +150,10 @@ Dropdown-Menu Styles
 }
 
 /* Brands Styles */
-.brand-section{
+.brand-section {
     padding: 40px;
 }
+
 .brands {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -164,8 +181,11 @@ Dropdown-Menu Styles
 
     .banner-section {
         flex-direction: column-reverse;
+        text-align: center;
     }
-
+    .banner-title {
+        font-size: 36px;
+    }
     .banner {
         width: 257px;
         height: 257px;
@@ -176,8 +196,32 @@ Dropdown-Menu Styles
         height: 190px;
     }
 
-    .brands{
-        grid-template-columns: repeat(4, 1fr);
+    .brands {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+        text-align: center;
     }
 
+}
+
+
+
+/* Tab Responsive */
+@media only screen and (min-width:688px) and (max-width:820px) {
+    .container {
+        margin: 30px 60px;
+    }
+
+    .nav-menu {
+        column-gap: 20px;
+    }
+
+    .banner-title {
+        font-size: 36px;
+    }
+
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
 }
